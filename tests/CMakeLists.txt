@@ -87,6 +87,7 @@ add_executable(gcd gcd.c)
 add_executable(hello hello.c)
 add_executable(mt-hello mt-hello.c)
 add_executable(symmetric symmetric.c)
+add_executable(udp-example udp-example.c)
 
 
 # Add custom command to generate spiflash.img from spiflash.py
