@@ -154,3 +154,6 @@
 [submodule "generators/vexiiriscv"]
 	path = generators/vexiiriscv
 	url = https://github.com/ucb-bar/vexiiriscv-tile.git
+[submodule "generators/ece718-24fall-spmm"]
+	path = generators/ece718-24fall-spmm
+	url = git@github.com:taoistmiao/ece718-24fall-spmm.git
