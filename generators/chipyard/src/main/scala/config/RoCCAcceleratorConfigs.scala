@@ -6,6 +6,12 @@ import org.chipsalliance.cde.config.{Config}
 // Configs with RoCC Accelerators
 // ------------------------------
 
+class SpMMRocketConfig extends Config(
+  new spmm.WithSpMM ++                                 // use Lean Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.rocket.WithNHugeCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
 // DOC include start: GemminiRocketConfig
 class GemminiRocketConfig extends Config(
   new gemmini.DefaultGemminiConfig ++                            // use Gemmini systolic array GEMM accelerator
