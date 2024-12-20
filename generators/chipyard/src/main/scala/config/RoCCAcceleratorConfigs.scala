@@ -7,8 +7,9 @@ import org.chipsalliance.cde.config.{Config}
 // ------------------------------
 
 class SpMMRocketConfig extends Config(
-  new spmm.WithSpMM ++                                 // use Lean Gemmini systolic array GEMM accelerator
-  new freechips.rocketchip.rocket.WithNHugeCores(1) ++
+  // new spmm.WithSpMM ++
+  new chipyard.config.WithAccumulatorRoCC ++
+  new freechips.rocketchip.rocket.WithNSmallCores(1) ++
   new chipyard.config.WithSystemBusWidth(128) ++
   new chipyard.config.AbstractConfig)
 
