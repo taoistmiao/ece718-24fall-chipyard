@@ -1,9 +1,11 @@
 FROM condaforge/miniforge3 AS base
 #stable version
-ARG CHECKOUT_HASH=1.13.0
+ARG CHECKOUT_HASH=ece718-24fall
 
 # Install Chipyard and run ubuntu-req.sh to install necessary dependencies
-COPY chipyard /chipyard
+# COPY .. /chipyard
+RUN git clone https://github.com/taoistmiao/ece718-24fall-chipyard.git /chipyard
+# RUN git clone git clone https://github.com/ucb-bar/chipyard.git /chipyard
 RUN cd /chipyard && \
         git checkout $CHECKOUT_HASH
 
